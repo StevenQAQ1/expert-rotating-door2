@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专家旋转门</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .module {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        .module-header {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .module-content {
+            padding: 20px;
+        }
+        .function {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        .function-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #2ecc71;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #27ae60;
+        }
+        .step-btn {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-right: 10px;
+            margin-top: 5px;
+            transition: background-color 0.3s;
+        }
+        .step-btn:hover {
+            background-color: #c0392b;
+        }
+        .hint {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 10px;
+        }
+        .platform-link {
+            display: inline-block;
+            background-color: #9b59b6;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+        .platform-link:hover {
+            background-color: #8e44ad;
+        }
+        .role-indicator {
+            display: inline-block;
+            background-color: #f39c12;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>专家旋转门</h1>
+        </header>
+
+        <!-- 模块1：业务人员——经验知识提取 -->
+        <div class="module">
+            <div class="module-header">模块1：业务人员——经验知识提取</div>
+            <div class="module-content">
+                <div class="function">
+                    <div class="function-title">① 业务协同决策分析 <span class="role-indicator">业务人员</span></div>
+                    <a href="业务协同决策分析模板.docx" class="download-btn">下载分析报告模板</a>
+                    <div class="hint">您现在的角色是业务人员，请根据"业务协同决策分析模板.docx"中的任务指南填写相应内容。</div>
+                </div>
+
+                <div class="function">
+                    <div class="function-title">② AI队友需求识别 <span class="role-indicator">业务人员</span></div>
+                    <a href="AI队友需求识别模板.docx" class="download-btn">下载分析报告模板</a>
+                    <div class="hint">您现在的角色是业务人员，请根据"AI队友需求识别模板.docx"中的任务指南填写相应内容。</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 模块2：IT人员——AI队友开发 -->
+        <div class="module">
+            <div class="module-header">模块2：IT人员——AI队友开发</div>
+            <div class="module-content">
+                <div class="function">
+                    <div class="function-title">① AI队友详细设计 <span class="role-indicator">IT人员</span></div>
+                    <a href="AI队友详细设计模板.docx" class="download-btn">下载分析报告模板</a>
+                    <div class="hint">您现在的角色是IT人员，请根据"AI队友详细设计模板.docx"中的任务指南填写相应内容。</div>
+                </div>
+
+                <div class="function">
+                    <div class="function-title">② AI队友实现 <span class="role-indicator">IT人员</span></div>
+                    <a href="https://claude.ai/" class="step-btn" target="_blank">步骤1：前往Claude生成AI队友</a>
+                    <a href="http://localhost:5678" class="step-btn" target="_blank">步骤2：前往n8n调试已生成的AI队友</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 模块3：AI运营官——AI队友验证与优化 -->
+        <div class="module">
+            <div class="module-header">模块3：AI运营官——AI队友验证与优化</div>
+            <div class="module-content">
+                <div class="hint" style="margin-bottom: 20px;">您现在的角色是AI运营官，请确保您已完成AI队友开发。</div>
+                
+                <div class="function">
+                    <div class="function-title">① AI队友验证：虚仿实验</div>
+                    <a href="https://www.ilab-x.com/details/page?id=11770&isView=true" class="platform-link" target="_blank">访问虚仿实验平台</a>
+                </div>
+
+                <div class="function">
+                    <div class="function-title">② AI队友优化</div>
+                    <textarea style="width: 100%; min-height: 100px; padding: 10px; border-radius: 4px; border: 1px solid #ddd;" placeholder="请在此填写AI队友的使用效果，以持续优化AI队友的设计..."></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
